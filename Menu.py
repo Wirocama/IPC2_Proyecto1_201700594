@@ -35,8 +35,7 @@ def menu():
     
             
         elif valor == "2":   
-            #opcion 2
-            pass
+            info.graficar()
 
         elif valor == "3":   
             #opcion 3
@@ -64,17 +63,17 @@ def cargar_archivo():
     print(Fore.WHITE + "                         CARGAR ARCHIVO                       ")
     print(Fore.YELLOW + "-------------------------------------------------------------")
     
-    try:
-        #RUTA DEL DOCUMENTO
-        ruta = filedialog.askopenfilename(initialdir = "/Desktop", title = "Seleccionar Archivo",
-            filetypes=(("Todos los Archivos","*.*"),("Archivos de Texto","*.txt")))
+    #try:
+    #RUTA DEL DOCUMENTO
+    ruta = filedialog.askopenfilename(initialdir = "/Desktop", title = "Seleccionar Archivo",
+    filetypes=(("Todos los Archivos","*.*"),("Archivos de Texto","*.txt")))
 
-        info.obtenerInformacion(ruta)
-        print("")
-        print(Fore.GREEN + "La ruta del Archivo es: " + Fore.WHITE + ruta) 
-        print("ARCHIVO LEIDO CORRECTAMENTE")  
-    except:
+    info.obtenerInformacion(ruta)
+    print("")
+    print(Fore.GREEN + "La ruta del Archivo es: " + Fore.WHITE + ruta) 
+    print("ARCHIVO LEIDO CORRECTAMENTE")  
+    #except:
         
-        print(Fore.RED + "\n||||||||||||||||||| " + Fore.WHITE + "ERROR AL LEER ARCHIVO"+ Fore.RED + " |||||||||||||||||||")
+        #print(Fore.RED + "\n||||||||||||||||||| " + Fore.WHITE + "ERROR AL LEER ARCHIVO"+ Fore.RED + " |||||||||||||||||||")
         
 menu()

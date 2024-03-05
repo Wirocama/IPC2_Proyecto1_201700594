@@ -1,4 +1,5 @@
 from Patrones import Patrones 
+from colorama import Fore
 
 
 class ListaPatrones:
@@ -18,3 +19,23 @@ class ListaPatrones:
             self.ultimo.siguiente = nuevoPatron
             nuevoPatron.anterior = self.ultimo
             self.ultimo = nuevoPatron
+
+    def recorrerPatrones(self):
+        nodoAux = self.raiz 
+
+        while True:
+            print(Fore.LIGHTWHITE_EX + nodoAux.codigo + ". " + nodoAux.patron)
+            if nodoAux.siguiente is not None:
+                nodoAux = nodoAux.siguiente
+            else: 
+                break
+
+    def buscarPatron(self, codigo):
+        nodoAux = self.raiz 
+
+        while nodoAux.codigo != codigo:
+            if nodoAux.siguiente is not None:
+                nodoAux = nodoAux.siguiente
+            else:
+                return None 
+        return nodoAux

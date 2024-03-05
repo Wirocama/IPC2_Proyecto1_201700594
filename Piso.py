@@ -1,4 +1,4 @@
-
+from ListaPatrones import ListaPatrones
 
 class Piso:
 
@@ -9,6 +9,7 @@ class Piso:
         self.columnas = columnas
         self.voltear = voltear
         self.intercambiar = intercambiar
+        self.patrones = ListaPatrones()
         self.siguiente = None
         self.anterior = None
 
