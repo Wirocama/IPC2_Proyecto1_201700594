@@ -20,9 +20,8 @@ def menu():
         print("")
         print(Fore.WHITE + "1. Cargar Archivo")
         print(Fore.WHITE + "2. Mostrar la grafica del Patron")
-        print(Fore.WHITE + "3. Seleccionar nuevo codigo de Patron")
-        print(Fore.WHITE + "4. Mostrar todos los pisos")
-        print(Fore.WHITE + "5. Salir")
+        print(Fore.WHITE + "3. Mostrar todos los pisos")
+        print(Fore.WHITE + "4. Salir")
         print("")
 
         #INPUT DE SELECCIÓN
@@ -39,15 +38,13 @@ def menu():
 
         elif valor == "3":   
             #opcion 3
-            pass
+            info.listadoGeneral()
+            
         
         elif valor == "4":   
             #opcion 4
-            pass
-
-                    
-        elif valor == "5":
-            break        
+            break
+        
 
         else:
             print("")

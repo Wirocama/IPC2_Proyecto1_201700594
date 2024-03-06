@@ -30,7 +30,7 @@ class ListaColores:
         cadena += titulo 
         cadena += ';'
         cadena += 'abcd [shape=none, margin=0, label=<'
-        cadena += '<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="20" COLOR="red">'
+        cadena += '<TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" CELLPADDING="20" COLOR="grey">'
         cadena += '<TR>'
 
         filaAux = nodoAux.fila
@@ -73,4 +73,34 @@ class ListaColores:
         #ABRIR ARCHIVO 
         webbrowser.open("grafica.jpg", new = 2, autoraise = True)
 
+    def combinarColores(self):
+        nodoAux = self.raiz
 
+        color = ""
+
+        while True:
+            color += nodoAux.color
+            if nodoAux.siguiente is not None:
+                nodoAux = nodoAux.siguiente
+            else:
+                break 
+        return color
+    
+    def buscarColor(self, fila, columna):
+        nodoAux = self.raiz 
+
+        while nodoAux is not None:
+            if nodoAux.fila == fila and nodoAux.columna == columna:
+                return nodoAux.color   
+            else:
+                nodoAux = nodoAux.siguiente 
+       
+    def cambiarColor(self, nuevoColor, fila, columna):
+        nodoAux = self.raiz 
+
+        while nodoAux is not None:
+            if nodoAux.fila == fila and nodoAux.columna == columna:
+                nodoAux.color = nuevoColor 
+                break 
+            else:
+                nodoAux = nodoAux.siguiente

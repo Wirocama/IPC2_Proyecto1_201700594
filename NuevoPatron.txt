@@ -1,0 +1,21 @@
+
+1. Se intercambiaron dos posiciones.
+BNNNN
+N
+ precio acumulado: Q. 1
+2. Se intercambiaron dos posiciones.
+BNNNN
+NN
+ precio acumulado: Q. 2
+3. Se intercambiaron dos posiciones.
+BNNNN
+NNN
+ precio acumulado: Q. 3
+4. Las posiciones son Iguales.
+BNNNN
+NNNB
+5. Se volteo una posicion.
+BNNNN
+NNNBB
+ precio acumulado: Q. 1003
+ El costo del cambio de patron es: Q. 1003
